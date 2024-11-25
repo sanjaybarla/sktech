@@ -163,6 +163,76 @@
             }
         }
 
+        .visitor-message {
+            position: fixed;
+            bottom: 20px;
+            left: 80%;
+            transform: translateX(-50%); /* Centering horizontally */
+            color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            font-size: 20px;
+            text-align: center; /* Centering the text inside the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out, pulse 1.5s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .visitor-message {
+                left: 25%;  /* Center horizontally */
+                transform: translateX(-50%); /* Adjust the transform to keep it centered */
+                bottom: 10%; /* Keep the message positioned 10% from the bottom */
+                max-width: 90%;  /* Set a max-width to avoid the message becoming too wide */
+                font-size: 16px;  /* Slightly reduce font size for mobile */
+            }
+        }
+
+
+        /* Adding animation to highlight the visitor count */
+        .visitor-count {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ff6347;
+            text-shadow: 2px 2px 10px rgba(255, 99, 71, 0.7);
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for visitor count */
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Pulse effect */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
 
 
     </style>
@@ -252,6 +322,7 @@
         
             </div>
             </div>
+            <div id="visitor-message" class="visitor-message"></div>
         </div>
         <!--about-->
         <div id="about">
@@ -622,6 +693,29 @@
 <script>
     particlesJS("particles", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#fff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":7,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.4,"width":2},"move":{"enable":true,"speed":3,"direction":"bottom","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
 </script>
+
+<script>
+        // Check if visitor count already exists in localStorage
+        let visitorCount = localStorage.getItem('visitorCount');
+
+        // If no count, this is the first visit
+        if (!visitorCount) {
+            visitorCount = 1482;
+        } else {
+            // Increment the visitor count
+            visitorCount = parseInt(visitorCount) + 1;
+        }
+
+        // Store updated visitor count in localStorage
+        localStorage.setItem('visitorCount', visitorCount);
+
+        // Create the visitor message with highlighted count
+        const visitorMessage = `" You Are <span class="visitor-count" >${visitorCount}th</span> visitor "`;
+
+        // Display the message on the page
+        document.getElementById('visitor-message').innerHTML = visitorMessage;
+    </script>
+
 
 </body>
 </html>
