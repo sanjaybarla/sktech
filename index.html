@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Willy Wonkas - Personal Portfolio Website Template" />
+	<meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
+	<meta name="author" content="willy wonka" />
+    <title>SKTech</title>
+  <!--favicon-img--> 
+   <link rel="icon" type="image/png" href="images/img/loooo.png">
+   <!--favicon-img-->
+   <!--main css file should not be removed -->
+    <link rel="stylesheet" href="css/index.css">
+    <!--main css file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .social-media-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between icons */
+        }
+
+        .social-media {
+            font-size: 60px; /* Default size for larger screens */
+            color: #ffaf02; /* Default icon color */
+            transition: transform 0.3s ease, color 0.3s ease;
+            animation: pulse 1.5s infinite; /* Add animation */
+        }
+
+        .social-media:hover {
+            transform: scale(1.2); /* Hover effect */
+            color: #007bff; /* Change color on hover */
+        }
+
+        /* WhatsApp Logo Special Style */
+        .whatsapp-logo {
+            color: #25d366; /* WhatsApp green */
+            animation: pulse 1.5s infinite; /* Add animation */
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Mobile View Adjustments */
+        @media (max-width: 768px) {
+            .social-media {
+                font-size: 40px; /* Smaller icons for mobile */
+            }
+
+            .social-media-links {
+                gap: 15px; /* Reduce spacing between icons */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-media {
+                font-size: 30px; /* Even smaller icons for very small screens */
+            }
+
+            .social-media-links {
+                gap: 10px; /* Compact spacing */
+            }
+        }
+
+
+        .bold-text {
+            font-weight: bold;
+        }
+        .header-image img {
+            width: 90%; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Center alignment */
+            margin: 50px 40px auto 0; /* Add top margin to push the image down */
+        }
+
+        .contactpic {
+            font-size: 40px; /* Adjust icon size */
+            color: #c36411; /* Default color */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .contactpic:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+            color: #0e6c32; /* Change color on hover */
+        }
+
+        .about-main {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: flex-start; /* Align text to the left */
+            width: 100%; /* Use full width of the container */
+            padding: 0 20px; /* Optional: Add padding to the left and right */
+            text-align: center;
+        }
+
+        .about-first-paragraph {
+            width: 100%; /* Ensure it spans the full width */
+            text-align: justify; /* Optional: Justify text alignment for a clean look */
+            margin: 0; /* Remove unnecessary margins */
+            line-height: 1.8; /* Improve readability */
+        }
+
+        .about-first-line, .about-second-line, .about-third-line {
+            display: block; /* Ensure lines span full width */
+            margin-bottom: 10px; /* Add spacing between lines */
+        }
+        .contact-icons {
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .contact-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Desktop view: Icons in a row */
+        .social-icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Icon styles */
+        .social-icon {
+            font-size: 4rem; /* Big icons */
+            color: #555;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2); /* Hover effect to increase size */
+            color: #007bff; /* Change to your preferred color on hover */
+        }
+
+        /* Animation class using WOW.js */
+        .wow {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .social-icons-container {
+                flex-direction: column; /* Stack icons vertically */
+                gap: 20px; /* Add spacing between icons */
+            }
+
+            .social-icon {
+                font-size: 5rem; /* Larger icons for mobile view */
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!--contains all the div-->
+    <div id="all">
+    <!--mouse  follower-->
+        <div class="cursor"></div>
+    <!--mouse  follower-->
+    <!--loader-->
+        <div id="loader">
+            <span class="color">SK<span style="color: white;">Tech</span></span>
+        </div>
+    <!--loader-end-->
+    <!--link-screen-->
+        <div id="breaker">
+        </div>
+        <div id="breaker-two">
+        </div>
+    <!--link-screen-->
+        <!--Main-Section-->
+        <!--Navigator-fullscreen-->
+        <div id="navigation-content">
+            <div class="logo">
+                <img src="images/img/5stroke.png" alt="logo">
+            </div>
+            <div class="navigation-close">
+                <span class="close-first"></span>
+                <span class="close-second"></span>
+            </div>
+            <div class="navigation-links">
+                <a href="#" data-text="HOME" id="home-link" >HOME</a>
+                <a href="#" data-text="ABOUT" id="about-link" >ABOUT</a>
+                <a href="#" data-text="CONTACT" id="contact-link" >CONTACT US</a>
+            </div>
+        </div>
+        <!--Menubar-->
+        <div id="navigation-bar">
+            <img src="images/img/5stroke.png" alt="logo">
+            <div class="menubar">
+                <span class="first-span"></span>
+                <span class="second-span"></span>
+                <span class="third-span"></span>
+            </div>
+        </div>
+        <!--Menubar End-->
+          <!--Header-->
+        <div id="header">
+            <div id="particles"></div>
+              <!--Social Media Links-->
+            <!-- Include Font Awesome -->
+            <div class="social-media-links">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/9581654845?text=Hi%20SKTech!" target="_blank">
+                    <i class="fab fa-whatsapp social-media whatsapp-logo"></i>
+                </a>
+                <a href="https://www.instagram.com/sreekannatech/" target="_blank">
+                    <i class="fab fa-instagram social-media"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/rajashekhar-kanukuntla/" target="_blank">
+                    <i class="fab fa-linkedin social-media"></i>
+                </a>
+            </div>
+
+            <!--Social Media Links end-->
+            <div class="header-content">
+                <div class="header-content-box">
+                <div class="firstline"><span class="color">SK</span>Tech</div>
+                <div class="secondline">
+                We'r 
+                <span class="txt-rotate color bold-text" data-period="1200" data-rotate='[ "Designers.", "Innovators.", "Engineers.", "Freelancers.", "Machine Learning Specialists.", "Embedded Engineers." ]'></span>
+                <span class="slash">|</span>
+            </div>
+            <div class="contact">
+                <!-- Email icon with Bootstrap icon -->
+                <a href="mailto:sreekannatech@gmail.com">
+                    <i class="bi bi-envelope-fill contactpic"></i>
+                </a>
+                <!-- Phone icon with Bootstrap icon -->
+                <a href="tel:9581654845">
+                    <i class="bi bi-telephone-fill contactpic"></i>
+                </a>
+            </div>
+        
+            </div>
+            </div>
+        </div>
+        <!--about-->
+        <div id="about">
+            <div class="color-changer">
+            <div class="color-panel">
+                <img src="images/gear.png" alt="">
+            </div>
+            <div class="color-selector">
+                <div class="heading">Custom Colors</div>
+                <div class="colors">
+                    <ul >
+                    <li>
+                        <a href="#0" class="color-red " title="color-red"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-purple" title="color-purple"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-malt" title="color-malt"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-green" title="color-green"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-blue" title="color-blue"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-orange" title="color-orange"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <!--about content-->
+            <div id="about-content">
+                <div class="about-header">
+                    About <span class="color">SKTech</span>
+                    <span class="header-caption">Your Partner in <span class="color">Innovation.</span></span>
+                </div>
+                <div class="about-main">
+                    <div class="about-first-paragraph wow">
+                        <!-- About Description -->
+                        <span class="about-first-line">
+                            Welcome to 
+                            <span class="color">SKTech</span>
+                            <!-- your one-stop solution for 
+                            <span class="color">ECE, CSE, and EEE</span> projects. -->
+                        </span>
+                        <br>
+                        <span class="about-second-line">
+                            With years of expertise in Embedded Systems, Machine Learning, Web Development, and Electronics Engineering, 
+                            we are dedicated to delivering innovative solutions tailored to your needs. 
+                            From academic projects to industry-grade designs, our team ensures precision and creativity at every step.
+                        </span>
+                        <br>
+                        <span class="about-third-line">
+                            Whether you're looking to develop a cutting-edge IoT system, an AI-based solution, or a professional-grade website, 
+                            SKTech is here to make your ideas a reality. 
+                        </span>
+                        <div class="cv">
+                            <a href="#contacttt"><button>Contact <span class="colors">Us</span></button></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!--services start-->
+            <div id="services">
+                <div class="color-changer">
+                    <div class="color-panel">
+                        <img src="images/gear.png" alt="">
+                    </div>
+                    <div class="color-selector">
+                        <div class="heading">Custom Colors</div>
+                        <div class="colors">
+                            <ul >
+                            <li>
+                                <a href="#0" class="color-red " title="color-red"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-purple" title="color-purple"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-malt" title="color-malt"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-green" title="color-green"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-blue" title="color-blue"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-orange" title="color-orange"></a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+            <!--services header-->
+                    <div class="services-heading wow">
+                        <span class="color">My</span> Services
+                    </div>
+            <!--services header end-->
+            <!--services content-->
+            <div class="services-content">
+                <!-- Service 1: Web Designing -->
+                <div class="service-one service wow">
+                    <div class="service-img">
+                        <img src="images/coding.png" alt="Web Designing" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Web Designing</h2>
+                        <p>We create visually appealing and user-friendly websites that are responsive and optimized for all devices.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 2: Social Media -->
+                <div class="service-two service wow">
+                    <div class="service-img">
+                        <img src="images/instagram.png" alt="Social Media" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Social Media</h2>
+                        <p>Enhancing your brand presence on platforms like Instagram, Facebook, and LinkedIn with tailored strategies.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 3: Creative Design -->
+                <div class="service-three service wow">
+                    <div class="service-img">
+                        <img src="images/bulb.png" alt="Creative Design" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Creative Design</h2>
+                        <p>Innovative and creative designs for logos, websites, and branding to elevate your business.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 4: Arduino -->
+                <div class="service-four service wow">
+                    <div class="service-img">
+                        <img src="images/img/arduno.png" alt="Arduino" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Arduino</h2>
+                        <p>Developing interactive and innovative projects using Arduino for automation and electronics.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 5: Embedded Systems -->
+                <div class="service-five service wow">
+                    <div class="service-img">
+                        <img src="images/img/embedded.png" alt="Embedded Systems" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Embedded Systems</h2>
+                        <p>Designing and building embedded systems for control and automation of various devices.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 6: VLSI -->
+                <div class="service-six service wow">
+                    <div class="service-img">
+                        <img src="images/img/vlsi.png" alt="VLSI" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>VLSI</h2>
+                        <p>Designing and simulating integrated circuits to create high-performance digital systems.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 7: MATLAB -->
+                <div class="service-seven service wow">
+                    <div class="service-img">
+                        <img src="images/img/matlab.png" alt="MATLAB" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>MATLAB</h2>
+                        <p>Utilizing MATLAB for simulations, algorithm development, and data analysis in engineering fields.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 8: IoT -->
+                <div class="service-eight service wow">
+                    <div class="service-img">
+                        <img src="images/img/iot.png" alt="IoT" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>IoT</h2>
+                        <p>Developing IoT systems to connect devices, making them smarter and more efficient for automation.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 9: IoRT -->
+                <div class="service-nine service wow">
+                    <div class="service-img">
+                        <img src="images/img/iotr.png" alt="IoRT" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>IoRT</h2>
+                        <p>Bringing together IoT and robotics to build interconnected, smart robotic systems for various applications.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 10: Raspberry Pi -->
+                <div class="service-ten service wow">
+                    <div class="service-img">
+                        <img src="images/img/rasberrypi.png" alt="Raspberry Pi" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Raspberry Pi</h2>
+                        <p>Creating innovative projects with Raspberry Pi for automation, IoT, and robotics applications.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 11: PCB Design -->
+                <div class="service-eleven service wow">
+                    <div class="service-img">
+                        <img src="images/img/pcb.png" alt="PCB Design" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>PCB Design</h2>
+                        <p>Designing printed circuit boards (PCBs) for electronics, ensuring reliability and performance in products.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 12: Smart Ideas -->
+                <div class="service-twelve service wow">
+                    <div class="service-img">
+                        <img src="images/img/smartideas.png" alt="Smart Ideas" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Smart Ideas</h2>
+                        <p>Bringing your innovative ideas to life through creative solutions and cutting-edge technologies.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 13: Full Stack Development -->
+                <div class="service-thirteen service wow">
+                    <div class="service-img">
+                        <img src="images/img/fullstack.png" alt="Full Stack Development" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Full Stack Development</h2>
+                        <p>Building scalable and robust web applications using modern front-end and back-end technologies.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 14: Data Science -->
+                <div class="service-fourteen service wow">
+                    <div class="service-img">
+                        <img src="images/img/datascience.png" alt="Data Science" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>Data Science</h2>
+                        <p>Leveraging data to extract meaningful insights, helping businesses make informed decisions and predictions.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 15: AI & ML -->
+                <div class="service-fifteen service wow">
+                    <div class="service-img">
+                        <img src="images/img/aiml.png" alt="AI & ML" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>AI & ML</h2>
+                        <p>Implementing machine learning algorithms and AI models to automate and optimize complex processes.</p>
+                    </div>
+                </div>
+            
+                <!-- Service 16: DL & Model Development -->
+                <div class="service-sixteen service wow">
+                    <div class="service-img">
+                        <img src="images/img/modeldev.png" alt="DL & Model Development" /> <!-- Replace with your image -->
+                    </div>
+                    <div class="service-description">
+                        <h2>DL & Model Development</h2>
+                        <p>Building deep learning models and solutions tailored to specific industry requirements and challenges.</p>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        <!--about end-->
+        <!--contact-->
+     <div id="contact">
+        <div class="color-changer">
+            <div class="color-panel">
+                <img src="images/gear.png" alt="">
+            </div>
+            <div class="color-selector">
+                <div class="heading">Custom Colors</div>
+                <div class="colors">
+                    <ul >
+                    <li>
+                        <a href="#0" class="color-red " title="color-red"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-purple" title="color-purple"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-malt" title="color-malt"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-green" title="color-green"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-blue" title="color-blue"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-orange" title="color-orange"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+         <div class="contact-header">Contact <span class="color"> Us</span>
+        <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div></div>
+        <div class="contact-content">
+            <div class="contact-icons">
+                <div class="social-icons-container">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/9581654845?text=Hi%20SKTech!" target="_blank" class="social-icon wow">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/sreekannatech/" target="_blank" class="social-icon wow">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/rajashekhar-kanukuntla/" target="_blank" class="social-icon wow">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:sreekannatech@gmail.com" target="_blank" class="social-icon wow">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <!-- Phone -->
+                    <a href="tel:+919581654845" target="_blank" class="social-icon wow">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                <div class="contact-quote wow" data-wow-delay="0.3s" style="text-align: center; margin-top: 30px;">
+                    <p class="quote-text" style="font-size: 2rem; color: white; font-family: 'Georgia', serif; line-height: 1.8; font-style: italic;">
+                        "At <span class="color" style="color: #ffcc00; font-weight: bold;">SKTech</span>, we pride ourselves on delivering 
+                        <strong style="font-weight: bold;">innovative and professional projects</strong> at 
+                        <span class="color" style="color: #ffcc00; font-weight: bold;">reasonable prices</span>, tailored to your unique requirements."
+                    </p>
+                </div>
+                
+                
+            </div>
+        </div>
+               <!--copyright-section-->
+     </div>
+        <!--contact end-->
+    </div>
+    <!--all the divisions-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--particles script-->
+<script>
+    particlesJS("particles", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#fff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":7,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.4,"width":2},"move":{"enable":true,"speed":3,"direction":"bottom","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+</script>
+
+</body>
+</html>
